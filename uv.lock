@@ -3,19 +3,57 @@ revision = 1
 requires-python = ">=3.12"
 
 [[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
+]
+
+[[package]]
 name = "img2webp"
 version = "0.1.0"
 source = { virtual = "." }
 
 [package.dev-dependencies]
 dev = [
+    { name = "radon" },
     { name = "ruff" },
 ]
 
 [package.metadata]
 
 [package.metadata.requires-dev]
-dev = [{ name = "ruff", specifier = ">=0.15.4" }]
+dev = [
+    { name = "radon", specifier = ">=6.0.1" },
+    { name = "ruff", specifier = ">=0.15.4" },
+]
+
+[[package]]
+name = "mando"
+version = "0.7.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/35/24/cd70d5ae6d35962be752feccb7dca80b5e0c2d450e995b16abd6275f3296/mando-0.7.1.tar.gz", hash = "sha256:18baa999b4b613faefb00eac4efadcf14f510b59b924b66e08289aa1de8c3500", size = 37868 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d2/f0/834e479e47e499b6478e807fb57b31cc2db696c4db30557bb6f5aea4a90b/mando-0.7.1-py2.py3-none-any.whl", hash = "sha256:26ef1d70928b6057ee3ca12583d73c63e05c49de8972d620c278a7b206581a8a", size = 28149 },
+]
+
+[[package]]
+name = "radon"
+version = "6.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama" },
+    { name = "mando" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b1/6d/98e61600febf6bd929cf04154537c39dc577ce414bafbfc24a286c4fa76d/radon-6.0.1.tar.gz", hash = "sha256:d1ac0053943a893878940fedc8b19ace70386fc9c9bf0a09229a44125ebf45b5", size = 1874992 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/93/f7/d00d9b4a0313a6be3a3e0818e6375e15da6d7076f4ae47d1324e7ca986a1/radon-6.0.1-py2.py3-none-any.whl", hash = "sha256:632cc032364a6f8bb1010a2f6a12d0f14bc7e5ede76585ef29dc0cecf4cd8859", size = 52784 },
+]
 
 [[package]]
 name = "ruff"
@@ -40,4 +78,13 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/1b/fa/2ef715a1cd329ef47c1a050e10dee91a9054b7ce2fcfdd6a06d139afb7ec/ruff-0.15.4-py3-none-win32.whl", hash = "sha256:65594a2d557d4ee9f02834fcdf0a28daa8b3b9f6cb2cb93846025a36db47ef22", size = 10506664 },
     { url = "https://files.pythonhosted.org/packages/d0/a8/c688ef7e29983976820d18710f955751d9f4d4eb69df658af3d006e2ba3e/ruff-0.15.4-py3-none-win_amd64.whl", hash = "sha256:04196ad44f0df220c2ece5b0e959c2f37c777375ec744397d21d15b50a75264f", size = 11651048 },
     { url = "https://files.pythonhosted.org/packages/3e/0a/9e1be9035b37448ce2e68c978f0591da94389ade5a5abafa4cf99985d1b2/ruff-0.15.4-py3-none-win_arm64.whl", hash = "sha256:60d5177e8cfc70e51b9c5fad936c634872a74209f934c1e79107d11787ad5453", size = 10966776 },
+]
+
+[[package]]
+name = "six"
+version = "1.17.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050 },
 ]
